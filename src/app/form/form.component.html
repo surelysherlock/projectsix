@@ -1,0 +1,29 @@
+<form [formGroup]="form" (ngSubmit)="submitData()">
+  <div>
+    <label for="username">Username</label>
+    <input formControlName="username" type="text" name="username" id="username">
+  </div>
+
+  <div>
+    <label for="password">Password</label>
+    <input formControlName="job" type="text" name="password" id="password">
+  </div>
+
+  <div formArrayName="notes">
+    <div *ngFor="let notes of formData.controls; let i = index;">
+      <div formGroupName="{{i}}">
+        <label for="notes">Notes</label>
+        <input formControlName="notes" type="text" name="notes" id="choco">
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <label for="vanilla">vanilla</label>
+    <input type="text" name="vanilla" id="vanilla">
+  </div>
+
+  <button type="submit">Create Post</button>
+
+  <p> {{form.value | json}}</p>
+</form>
