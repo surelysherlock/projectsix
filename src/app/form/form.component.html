@@ -8,7 +8,8 @@
     <label for="password">Password</label>
     <input formControlName="job" type="text" name="password" id="password">
   </div>
-
+  
+  <button mat-button>Basic</button>
   <div formArrayName="notes">
     <div *ngFor="let notes of formData.controls; let i = index;">
       <div formGroupName="{{i}}">
@@ -17,7 +18,7 @@
       </div>
     </div>
   </div>
-
+  
   <div>
     <label for="vanilla">vanilla</label>
     <input type="text" name="vanilla" id="vanilla">
