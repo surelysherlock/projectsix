@@ -9,8 +9,11 @@ import { FormComponent } from './form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MaterialModule } from './material'
+import { MaterialModule } from './material';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
+import {MatMenuModule} from '@angular/material/menu'
+import {MatIconModule} from '@angular/material/icon'
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +27,10 @@ import { MaterialModule } from './material'
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    MatMenuModule,
+    MatIconModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

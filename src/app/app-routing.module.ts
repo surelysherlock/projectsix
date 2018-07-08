@@ -7,7 +7,7 @@ import { FormComponent } from './form/form.component';
 const routes: Routes = [
   {
     path: '',
-    component: FormComponent
+    component: HomeComponent
   },
   {
     path: 'contact',
